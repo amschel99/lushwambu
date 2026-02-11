@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 97%;
+    --foreground: 15 30% 15%;
+    --card: 30 33% 98%;
+    --card-foreground: 15 30% 15%;
+    --popover: 30 33% 98%;
+    --popover-foreground: 15 30% 15%;
+    --primary: 11 54% 50%;
+    --primary-foreground: 30 33% 98%;
+    --secondary: 35 20% 92%;
+    --secondary-foreground: 15 30% 15%;
+    --muted: 35 20% 90%;
+    --muted-foreground: 15 20% 40%;
+    --accent: 158 35% 23%;
+    --accent-foreground: 30 33% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 20% 85%;
+    --input: 35 20% 88%;
+    --ring: 11 54% 50%;
+    --radius: 0.5rem;
+
+    --color-cream: #FDF8F7;
+    --color-sand: #F2E9E4;
+    --color-terracotta: #E07A5F;
+    --color-burgundy: #772E25;
+    --color-cocoa: #5C3D2E;
+    --color-forest: #284B3C;
+
+    --font-fraunces: 'Fraunces', serif;
+    --font-inter: 'Inter', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[var(--color-cream)] text-foreground;
+    font-family: var(--font-inter);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-fraunces);
+  }
+
+  ::selection {
+    background-color: #E07A5F;
+    color: white;
+  }
+}
+
+/* Hide scrollbar for carousels */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
